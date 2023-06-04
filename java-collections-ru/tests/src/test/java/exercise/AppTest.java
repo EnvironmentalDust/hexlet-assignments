@@ -18,6 +18,9 @@ class AppTest {
         assertThat(App.take(numbers1, 3))
                 .size().isEqualTo(3);
 
+        assertThat(App.take(numbers1, 999))
+                .size().isEqualTo(4);
+
         List<Integer> expected1 = new ArrayList<>(Arrays.asList(1, 2));
         assertThat(App.take(numbers1, 2))
                 .isEqualTo(expected1);
